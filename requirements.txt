@@ -9,3 +9,4 @@ pypdf
 sentence-transformers
 langchain
 pysqlite3-binary
+chroma
