@@ -1,3 +1,4 @@
+Python >= 3.10
 trulens_eval
 openai
 pandas
@@ -9,5 +10,4 @@ pypdf
 sentence-transformers
 langchain
 pysqlite3-binary
-chroma
 chromadb
