@@ -1,10 +1,11 @@
 # Load environment variables from the .env file
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
-load_dotenv()
+# load_dotenv()
 
 # Access the API key using the environment variable name
-openai_api_key = os.getenv("OPENAI_API_KEY")
+# openai_api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = st.secrets.OPENAI_API_KEY
 
 from langchain.vectorstores import Chroma
 from langchain.embeddings import OpenAIEmbeddings
@@ -16,7 +17,7 @@ from langchain.document_loaders import DirectoryLoader
 
 
 from langchain.embeddings import OpenAIEmbeddings
-embedding=OpenAIEmbeddings(openai_api_key= os.getenv("OPENAI_API_KEY"))
+embedding=OpenAIEmbeddings(openai_api_key= openai.api_key)
 vectordb = Chroma(
     persist_directory= "C:/Users/USER/Downloads/Retrival_methods/new_chroma_tfgm/db",
     embedding_function=embedding,
@@ -28,7 +29,7 @@ vectordb = Chroma(
 # retriever = vectordb.as_retriever(search_kwargs={"k": 2})
 from langchain.chat_models import ChatOpenAI
 
-llm=ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613",openai_api_key= os.getenv("OPENAI_API_KEY"))
+llm=ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613",openai_api_key= openai.api_key)
 
 from langchain.chains import RetrievalQA
 
