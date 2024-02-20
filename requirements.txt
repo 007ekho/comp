@@ -10,3 +10,4 @@ sentence-transformers
 langchain
 pysqlite3-binary
 chroma
+chromadb
