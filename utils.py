@@ -1,6 +1,7 @@
 # Load environment variables from the .env file
 # from dotenv import load_dotenv
 import os
+import streamlit as st
 # load_dotenv()
 
 # Access the API key using the environment variable name
