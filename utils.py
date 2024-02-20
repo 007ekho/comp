@@ -3,11 +3,10 @@
 import os
 import streamlit as st
 # load_dotenv()
-
 # Access the API key using the environment variable name
 # openai_api_key = os.getenv("OPENAI_API_KEY")
 openai_api_key = st.secrets.OPENAI_API_KEY
-
+ 
 from langchain.vectorstores import Chroma
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
