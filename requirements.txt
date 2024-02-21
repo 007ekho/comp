@@ -1,13 +1,13 @@
-
-trulens_eval
+python==3.10.3
+trulens-eval
 openai
 pandas
 llama-index
 streamlit
 transformers
 torch
-pypdf
+PyPDF2
 sentence-transformers
 langchain
-pysqlite3-binary
+pysqlite3-binary>=3.35.0
 chromadb
