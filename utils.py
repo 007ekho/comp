@@ -1,5 +1,8 @@
 # Load environment variables from the .env file
 # from dotenv import load_dotenv
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import os
 import streamlit as st
 # load_dotenv()
@@ -18,8 +21,14 @@ from langchain.document_loaders import DirectoryLoader
 
 from langchain.embeddings import OpenAIEmbeddings
 embedding=OpenAIEmbeddings(openai_api_key= openai_api_key)
+# vectordb = Chroma(
+#     persist_directory= "C:/Users/USER/Downloads/Retrival_methods/new_chroma_tfgm/db",
+#     embedding_function=embedding,
+    
+# )
+
 vectordb = Chroma(
-    persist_directory= "C:/Users/USER/Downloads/Retrival_methods/new_chroma_tfgm/db",
+    persist_directory= "./db",
     embedding_function=embedding,
     
 )
