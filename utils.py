@@ -38,7 +38,7 @@ vectordb = Chroma(
 # retriever = vectordb.as_retriever(search_kwargs={"k": 2})
 from langchain.chat_models import ChatOpenAI
 from langchain import hub
-prompt = hub.pull("ehi007/prompt_for_rag_v1", api_url="https://smith.langchain.com/hub/ehi007/prompt_for_rag_v1")
+prompt = hub.pull("ehi007/prompt_for_rag_v1")
 llm=ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613",openai_api_key= openai_api_key)
 
 from langchain.chains import RetrievalQA
