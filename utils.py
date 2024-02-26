@@ -47,7 +47,7 @@ qa_chain = RetrievalQA.from_chain_type(
     llm= llm,
     retriever= vectordb.as_retriever(),
     return_source_documents=True,
-    chain_type_kwargs={"prompt": prompt},
+    # chain_type_kwargs={"prompt": prompt},
     chain_type="stuff"
    )
 
